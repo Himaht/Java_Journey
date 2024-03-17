@@ -48,7 +48,7 @@ public class Movie {
 			System.out.println("Movie " + title + " is available");
 		}
 	}
-	public String returnedMovie() {
+	public void returnedMovie() {
 		if(!isAvailable) {
 			isAvailable = true;
 			System.out.println("Movie " + title + " has been returned");
