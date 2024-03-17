@@ -23,6 +23,10 @@ public class MovieRentalSystem {
 		Movie movies = new Movie(movieTitle, movieMirector, movieGenre, movieRealeaseyear);
 		
 		System.out.println(movies);
+
+		movie.availability();
+
+        	movie.returnedMovie();
 	}
 
 }
