@@ -1,13 +1,14 @@
+import java.util.ArrayList;
 
-public class Customer extends Movie {
+public class Customer {
 	private ArrayList<Movie> rentedMovie;
 	private String name;
 	private String contactInfo;
 	
-	public Customer() {
-		name = " ";
-		rentedMovie = new ArrayList<>();
-		contactInfo = " ";
+	public Customer(String name, String contactInfo) {
+		this.name = name;
+		rentedMovie = new ArrayList<Movie>();
+		this.contactInfo = contactInfo;
 	}
 	public void setName(String name_) {
 		name = name_;
@@ -15,11 +16,8 @@ public class Customer extends Movie {
 	public String getName() {
 		return name;
 	}
-	public void setrentedMovie(String rentedMovie_) {
+	public void setrentedMovie(ArrayList<Movie> rentedMovie_) {
 		rentedMovie = rentedMovie_;
-	}
-	public String getrentedMovie() {
-		return rentedMovie;
 	}
 	public void setcontactInfo(String contactInfo_) {
 		contactInfo = contactInfo_;
@@ -34,6 +32,9 @@ public class Customer extends Movie {
 	public void returnedMovie(Movie movie) {
 		rentedMovie.remove(movie);
 		System.out.println("Movie " + movie.getTitle() + " returned by " + name);
+	}
+	public ArrayList<Movie> getrentedMovie() {
+		return rentedMovie;
 	}
 	public String toString() {
         return "Customer: " + name + ", Contact Info: " + contactInfo;
