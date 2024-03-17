@@ -31,7 +31,7 @@ public class Movie {
 	public String getDirector() {
 		return director;
 	}
-	public void setReleaseyear(String release) {
+	public void setReleaseyear(int release) {
 		releaseYear = release;
 	}
 	public int getReleaseyear() {
